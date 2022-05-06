@@ -79,14 +79,14 @@
             <!--        <form action="upload_cdr.jsp">
                         <input id="add" type="submit" value="Upload CDR"/><br><br></form>
             -->                    
-            <form action="">
+            <form action="DisplayUser.jsp">
                 <input id="add" type="submit" value="Display All Customers"/><br><br></form>
                 <!--
             <form action="display_profiles.jsp">
                 <input id="add" type="submit" value="Display All Profiles"/><br><br></form>
             <form action="display_services.jsp">
                 <input id="add" type="submit" value="Display All Services"/><br><br></form>-->
-            <form action="display_invoices.jsp">
+            <form action="">
                 <input id="add" type="submit" value="Display Invoices"/><br><br></form>
         </div>
 

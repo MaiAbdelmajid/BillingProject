@@ -10,10 +10,10 @@ package com.billing.web;
  * @author LENOVO
  */
 public class CustomerBean {
-    private int id, age;
+    private int id, age, msisdn;
     private String name, address, email;
   //  private String  gender, country;
-    private String RB_id;
+   
 
     public int getId() {
         return id;
@@ -23,13 +23,13 @@ public class CustomerBean {
         this.id = id;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void setAge(int age) {
+//        this.age = age;
+//    }
 
     public String getName() {
         return name;
@@ -62,6 +62,13 @@ public class CustomerBean {
     public void setEmail(String email) {
         this.email = email;
     }
+    public int getmsisdn() {
+        return age;
+    }
+
+    public void setmsisdn(int age) {
+        this.age = age;
+    }
 
 //    public String getCountry() {
 //        return country;
@@ -71,12 +78,12 @@ public class CustomerBean {
 //        this.country = country;
 //    }
 
-    public String getRB_id() {
-        return RB_id;
-    }
-
-    public void setRB_id(String RB_id) {
-        this.RB_id = RB_id;
-    }
+//    public String getRB_id() {
+//        return RB_id;
+//    }
+//
+//    public void setRB_id(String RB_id) {
+//        this.RB_id = RB_id;
+//    }
     
 }

@@ -4,6 +4,8 @@
     Author     : LENOVO
 --%>
 
+<%@page import="com.billing.web.CustomerDAO"%>
+<%@page import="com.billing.web.CustomerBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,43 +26,53 @@
         }
                 </style>
                 </head>
+           
+                
     <body>
          
 <div>
       <form class="center" action="AddStatus.jsp">
+              
       <div>
           <h1>Add New Customer</h1>
       </div>
       <div>
-        <span style=" font-size: 25px;"> Name</span>
-        <input id="customerName" type="text" placeholder="Enter Name" required name="customerName"/><br><br>
+        <span style=" font-size: 25px;"> National ID</span>
+        <input id="customerid" type="int" placeholder="Enter id" required name="National ID"/><br><br>
       </div>
       <div >
-        <span style=" font-size: 25px;">Email</span>
-        <input  id="email" type="text" placeholder="Enter Email" required  name="Email"/><br><br>
+        <span style=" font-size: 25px;">User name</span>
+        <input  id="name" type="text" placeholder="Enter Name" required  name="User name"/><br><br>
         
       </div> 
 
-        <div >
-        <span style=" font-size: 25px;">MSISDN</span>
+<!--        <div >
+        <span style=" font-size: 25px;">Age</span>
         <input  id="msisdn" type="text" placeholder="Enter MSISDN" required  name="MSISDN"/><br><br>
         
-      </div> 
-        <div >
-        <span style=" font-size: 25px;">IMSI</span>
-        <input  id="imsi" type="text" placeholder="Enter IMSI" required  name="IMSI"/><br><br>
-        
-      </div> 
+      </div> -->
         <div >
         <span style=" font-size: 25px;">Address</span>
-        <input  id="address" type="text" placeholder="Enter Address" required  name="Address"/><br><br>
+        <input  id="address" type="text" placeholder="Enter address" required  name="Address"/><br><br>
         
       </div> 
         <div >
+        <span style=" font-size: 25px;">E-mail</span>
+        <input  id="email" type="email" placeholder="Enter email" required  name="E-mail"/><br><br>
+        
+      </div> 
+          
+          <div >
+        <span style=" font-size: 25px;">MSISDN</span>
+        <input  id="msisdn"  type="int" placeholder="Enter msisdn" required  name="MSISDN"/><br><br>
+        
+      </div> 
+          
+<!--        <div >
         <span style=" font-size: 25px;">Profile ID</span>
         <input  id="profile_id"  type="text" placeholder="Enter Profile ID" required  name="Profile ID"/><br><br>
         
-      </div> 
+      </div> -->
         
         <div >
         <input  style=" font-size: 25px;"id="submit" class="sub"  type="submit" value="Submit">  
@@ -69,4 +81,5 @@
   </div>
    
 </body>
+
 </html>
