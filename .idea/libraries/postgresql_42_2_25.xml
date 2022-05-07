@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="postgresql-42.2.25">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/BillingProject-master/BillingWeb/build/web/WEB-INF/lib/postgresql-42.2.25.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
