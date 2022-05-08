@@ -81,6 +81,7 @@ public class Report extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
+            //this is a dummy database to test the pdf generation file   
             Class.forName("org.postgresql.Driver");
             con = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost/jaspercustomer","postgres","postgres");
             JasperDesign jdesign = JRXmlLoader.load("C:\\Users\\a7med\\Downloads\\BillGenerate\\src\\CustomerReport\\report1.jrxml");
