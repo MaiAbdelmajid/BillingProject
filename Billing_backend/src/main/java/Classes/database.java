@@ -29,7 +29,7 @@ public class database {
         }
     }
     public List<String> getUserMSISDNs(int userID) throws SQLException {
-        preparedStatement = this.con.prepareStatement("select msisdn from bscs.contract where userid = ?");
+        preparedStatement = this.con.prepareStatement("select msisdn from bscs.contract where national_userid= ?");
         preparedStatement.setInt(1,userID);
         ResultSet rs = preparedStatement.executeQuery();
         List<String> MSISDNs = new ArrayList<>();
@@ -80,5 +80,19 @@ public class database {
            values[1] = Integer.toString(rs.getInt("fee"));
         }
         return values;
+    }
+    public List<User> getUsers () throws SQLException {
+        preparedStatement=this.con.prepareStatement("select * from bscs.users;");
+        ResultSet rs =preparedStatement.executeQuery();
+        List<User> users =new ArrayList<>();
+        while(rs.next())
+        {  users.add(new User(rs.getInt("national_id"),
+                rs.getString("username"),
+                rs.getString("address"),
+                rs.getString("email"),
+                rs.getInt("msisdn")
+                ));
+        }
+        return users;
     }
 }

@@ -1,4 +1,5 @@
 import Classes.Bill_info;
+import Classes.User;
 import Classes.database;
 
 import java.sql.SQLException;
@@ -60,10 +61,17 @@ public class BillCycle {
         for (String msisdn : userNumber)
         {
             BU.add(BillCycle.billCycle(msisdn));
-
         }
+
           return BU ;
 
     }
-    public static void generateUsers
+    public static void generateUsersBills () throws SQLException {
+         List<User> users = database.instDB.getUsers();
+        for (User us :users)
+        {
+            BillCycle.generateUserBill(us.getNational_id());
+        }
+
+    }
 }
