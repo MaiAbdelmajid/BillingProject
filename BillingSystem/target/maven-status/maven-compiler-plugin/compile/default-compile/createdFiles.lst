@@ -1,0 +1,7 @@
+rating\interfaces\ServiceInterface.class
+rating\interfaces\ZoneType.class
+parsing\Parsing.class
+database\classes\Cdr.class
+database\classes\Udr.class
+database\classes\CdrDatabase.class
+rating\engine\Rating.class
