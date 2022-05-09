@@ -95,4 +95,19 @@ public class database {
         }
         return users;
     }
+    public User getUser (int national_id) throws SQLException {
+        preparedStatement=this.con.prepareStatement("select * from bscs.users where national_id =?;");
+        preparedStatement.setInt(1,national_id); 
+      ResultSet rs =preparedStatement.executeQuery();
+        List<User> users =new ArrayList<>();
+        while(rs.next())
+        {  users.add(new User(rs.getInt("national_id"),
+                rs.getString("username"),
+                rs.getString("address"),
+                rs.getString("email"),
+                rs.getInt("msisdn")
+                ));
+        }
+        return users.get(0);
+    }
 }

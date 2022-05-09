@@ -1,10 +1,13 @@
 import Classes.Bill_info;
 import Classes.User;
 import Classes.database;
+import Classes.Report;
+import java.io.FileNotFoundException;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import net.sf.jasperreports.engine.JRException;
 
 public class BillCycle {
 
@@ -55,18 +58,20 @@ public class BillCycle {
 
         return numberBill;
     }
-    public static List<Bill_info> generateUserBill (int national_id) throws SQLException{
+    public static List<Bill_info> generateUserBill (int national_id) throws SQLException, FileNotFoundException, JRException{
         List<Bill_info> BU= new ArrayList<>();
         List<String> userNumber = database.instDB.getUserMSISDNs(national_id);
         for (String msisdn : userNumber)
         {
             BU.add(BillCycle.billCycle(msisdn));
         }
-
+        User user=database.instDB.getUser(national_id);
+        String fileName = "Reports_"+national_id+".pdf";
+        Report.generate(BU,user,fileName);
           return BU ;
 
     }
-    public static void generateUsersBills () throws SQLException {
+    public static void generateUsersBills () throws SQLException, FileNotFoundException, JRException {
          List<User> users = database.instDB.getUsers();
         for (User us :users)
         {

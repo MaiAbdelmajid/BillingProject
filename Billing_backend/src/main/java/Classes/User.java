@@ -1,6 +1,6 @@
 package Classes;
 
-import org.omg.CORBA.WStringSeqHelper;
+
 
 public class User {
     private int national_id;
