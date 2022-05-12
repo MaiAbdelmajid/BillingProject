@@ -61,7 +61,7 @@ public class Report {
         OutputStream outputSteam = new FileOutputStream(file);
         JasperExportManager.exportReportToPdfStream(jasperPrint, outputSteam);
 
-        System.out.println("Report Generated!");
+        System.out.println("Bill Generated Successfully ");
     }
 
     private static int TotalFeeHelper(List<Bill_info> invoice) {
