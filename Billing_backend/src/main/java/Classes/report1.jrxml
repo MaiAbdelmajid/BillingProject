@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JasperDesign" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="593b6ab5-22c3-43a8-b359-bd77fc93a111">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="12"/>
+	<property name="ireport.y" value="0"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#C7CDD1"/>
@@ -59,32 +59,32 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="86" splitType="Stretch">
+		<band height="86" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="67" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="25" width="180" height="61" uuid="79ad374c-0e45-47d0-a90b-35dff7c0b521"/>
+				<reportElement x="190" y="4" width="180" height="62" uuid="e1838f02-3496-47b6-8bfa-9b5a5d65df5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Address: "+$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="5" width="180" height="61" uuid="79ad374c-0e45-47d0-a90b-35dff7c0b521"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Name: "+$P{uname}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="307" y="24" width="200" height="61" uuid="fc225980-fee1-43b5-a8be-4a0b93a66329"/>
+				<reportElement x="355" y="4" width="200" height="61" uuid="fc225980-fee1-43b5-a8be-4a0b93a66329"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["National Id: "+$P{id}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="164" y="85" width="180" height="62" uuid="e1838f02-3496-47b6-8bfa-9b5a5d65df5f"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Address: "+$P{address}]]></textFieldExpression>
-			</textField>
 		</band>
-	</title>
-	<pageHeader>
-		<band height="67" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
 		<band height="68" splitType="Stretch">
