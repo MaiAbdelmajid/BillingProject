@@ -78,7 +78,7 @@ public class BillDatabase {
                 + "where ct.msisdn = ? ;");
         preparedStatement.setString(1, msisdn);
         ResultSet rs = preparedStatement.executeQuery();
-        String[] values = null;
+        String [] values = new String[2];
         while (rs.next()) {
             values[0] = rs.getString("commercial_name");
 System.out.print(values[0]);
@@ -104,23 +104,18 @@ System.out.print(values[1]);
         return users;
     }
 
-    public User getUser(int national_id) throws SQLException {
-
-//        preparedStatement = this.con.prepareStatement("select * from bscs.users where national_id =?;");
-
-
-        preparedStatement = this.con.prepareStatement("SELECT national_id,username, address, email, msisdn FROM bscs.users,bscs.contract where national_id=national_userid");
-
-        preparedStatement.setInt(1, national_id);
-        ResultSet rs = preparedStatement.executeQuery();
-        List<User> users = new ArrayList<>();
-        while (rs.next()) {
-            users.add(new User(rs.getInt("national_id"),
-                    rs.getString("username"),
-                    rs.getString("address"),
-                    rs.getString("email"),
-                    rs.getString("msisdn")
-            ));
+    public User getUser (int national_id) throws SQLException {
+        preparedStatement=this.con.prepareStatement("SELECT national_id,username, address, email, msisdn FROM bscs.users,bscs.contract where national_id=?");
+        preparedStatement.setInt(1,national_id);
+        ResultSet rs =preparedStatement.executeQuery();
+        List<User> users =new ArrayList<>();
+        while(rs.next())
+        {  users.add(new User(rs.getInt("national_id"),
+                rs.getString("username"),
+                rs.getString("address"),
+                rs.getString("email"),
+                rs.getString("msisdn")
+        ));
         }
         return users.get(0);
     }
