@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/SearchAction.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/src/java/com/billing/web/CustomerBean.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/src/java/com/billing/web/CustomerDAO.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/WelcomePage.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/UpdateAction.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/src/conf/MANIFEST.MF</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/DisplayAllRP.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/index.html</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/error.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/DisplayURatePlan.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/DisplayAllServicePKG.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/AddContractAction.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/CreateServicePackage.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/META-INF/context.xml</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/src/java/com/billing/web/StartConn.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/AddCustomer.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/CreateRatePlan.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/DeleteUser.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/AddRateplanAction.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/AddSPKGAction.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/DisplayUser.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/AddStatus.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/AdminForm.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/src/java/com/billing/web/ServletListenerToClose.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/UpdateUserContract.jsp</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/BillingWeb/web/AddContract.jsp</file>
+        </group>
+    </open-files>
+</project-private>

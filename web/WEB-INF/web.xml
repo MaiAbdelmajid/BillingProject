@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>com.billing.web.ServletListenerToClose</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.billing.web.SearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StartConn</servlet-name>
+        <servlet-class>com.billing.web.StartConn</servlet-class>
+        <!--to start StartConn firstly-->
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StartConn</servlet-name>
+        <url-pattern>/StartConn</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
