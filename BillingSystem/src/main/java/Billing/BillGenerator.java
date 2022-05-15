@@ -29,8 +29,8 @@ import java.util.Map;
 
 public class BillGenerator {
     
-     public static final String fileName = "G:\\Billing\\BillingProject\\BillingSystem\\src\\main\\java\\Billing\\report1.jrxml";
-     public static final String outFile = "G:\\Billing\\BillingProject\\Bills";
+     public static final String fileName = "D:\\BillingProject\\BillingProject\\BillingSystem\\src\\main\\java\\Billing\\report1.jrxml";
+     public static final String outFile = "D:\\BillingProject\\BillingProject\\";
 
     public static void generate(List<BillInfo> invoice, User user, String path) throws FileNotFoundException, JRException {
        

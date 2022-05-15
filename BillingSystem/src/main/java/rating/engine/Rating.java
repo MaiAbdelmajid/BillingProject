@@ -142,7 +142,7 @@ public class Rating implements ServiceInterface, ZoneType {
 
     private int getFreeUnits(int id) {
         try {
-            ps = db.con.prepareStatement("select free_units from rtx.consumsion where contractid =?");
+            ps = db.con.prepareStatement("select free_units from rtx.consumption where contractid =?");
             ps.setInt(1, id);
             res = ps.executeQuery();
             return res.getInt(1);
@@ -173,7 +173,7 @@ private void setFreeUnits(float bucketConsumption, int contractid) {
                 {"data_service", "data_service", "data_service"}
             };
 
-            ps = db.con.prepareStatement("select " + arr[ServiceId - 1][zoneId - 1] + " from rtx.consumsion where contractid=?");
+            ps = db.con.prepareStatement("select " + arr[ServiceId - 1][zoneId - 1] + " from rtx.consumption where contractid=?");
             ps.setInt(1, contractid);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -238,7 +238,6 @@ private void setFreeUnits(float bucketConsumption, int contractid) {
             ps.setInt(3, uploadCDR.getServiceid());
             ps.setDate(4, (Date) uploadCDR.getStartdate());
             ps.setString(5, uploadCDR.getStarttime());
-
             ps.setFloat(6, uploadCDR.getDuration());
             ps.setInt(7, uploadCDR.getRpid());
             ps.setFloat(8, uploadCDR.getExternalcharge());
