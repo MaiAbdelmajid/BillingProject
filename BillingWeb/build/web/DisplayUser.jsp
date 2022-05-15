@@ -16,10 +16,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Display Customers</title>
     </head>
-    <body> 
+    <style>.page{background-color: #C4D4C0;}</style>
+    <body class="page"> 
         <%
                 Connection conn = CustomerDAO.conn;
-            CustomerDAO.getConnection();
+           // CustomerDAO.getConnection();
             //Connection conn = 
             PreparedStatement stat = null;
             ResultSet rs = null;
@@ -35,9 +36,13 @@
                 <td><b>Customer Name</b></td>
                 <td><b>Address</b></td>
                 <td><b>Email</b></td>
-                <td><b>MSISDN</b></td>
+                <td><b>Cotract ID</b></td>
+                <td><b>Dailable No</b></td>
+                <td><b>RatePlan ID</b></td>             
+                <td><b>Edit Contract</b></td>
+                <td><b>Delete</b></td>
             </tr>
-            <%        stat = conn.prepareStatement("SELECT * FROM bscs.users");
+            <%        stat = conn.prepareStatement("SELECT national_id,username, address, email, contractid, msisdn, rateplane_id FROM bscs.users,bscs.contract where national_id=national_userid");
 
                 rs = stat.executeQuery();
                 while (rs.next()) {
@@ -50,8 +55,12 @@
                 <td><%=rs.getString("username")%></td>
                 <td><%=rs.getString("address")%></td>
                 <td><%=rs.getString("email")%></td>
-                <td><%=rs.getString("msisdn")%></td>
-
+                <td><%=rs.getString("contractid")%></td>
+                <td><%=rs.getString("msisdn")%></td> 
+                <td><%=rs.getString("rateplane_id")%></td>
+                <td><a href="UpdateUserContract.jsp?id=<%=rs.getString("contractid")%>">Edit</a></td>
+                <td><a href="DeleteUser.jsp?id=${b.getId()}">Delete</a></td>
+             
             </tr>
 
             <%

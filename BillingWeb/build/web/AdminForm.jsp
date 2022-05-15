@@ -47,7 +47,7 @@
 
         <style>
             .center {
-
+background-color: #C4D4C0;
                 margin: auto;
                 hight: 50%;
                 width: 90%;
@@ -60,10 +60,11 @@
             }
             .row3{ padding: 10px;}
             .row6{padding: 10px;}
+            .page{background-color: #C4D4C0}
         </style>
 
     </head>
-    <body>
+    <body class="page">
         <form action="AdminForm.jsp">
             <section class = "center">
 

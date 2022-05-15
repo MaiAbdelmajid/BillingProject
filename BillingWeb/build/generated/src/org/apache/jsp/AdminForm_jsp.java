@@ -93,7 +93,7 @@ public final class AdminForm_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        <style>\n");
       out.write("            .center {\n");
-      out.write("\n");
+      out.write("background-color: #C4D4C0;\n");
       out.write("                margin: auto;\n");
       out.write("                hight: 50%;\n");
       out.write("                width: 90%;\n");
@@ -106,10 +106,11 @@ public final class AdminForm_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            }\n");
       out.write("            .row3{ padding: 10px;}\n");
       out.write("            .row6{padding: 10px;}\n");
+      out.write("            .page{background-color: #C4D4C0}\n");
       out.write("        </style>\n");
       out.write("\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body class=\"page\">\n");
       out.write("        <form action=\"AdminForm.jsp\">\n");
       out.write("            <section class = \"center\">\n");
       out.write("\n");

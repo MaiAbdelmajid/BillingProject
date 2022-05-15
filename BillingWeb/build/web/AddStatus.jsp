@@ -4,6 +4,8 @@
     Author     : LENOVO
 --%>
 
+<%@page import="java.sql.Connection"%>
+
 <%@page import="com.billing.web.CustomerDAO"%>
 <%@page import="com.billing.web.CustomerBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Add Customer Action</title>
     </head>
     <body>
         <%
@@ -20,22 +22,20 @@
             String username = request.getParameter("User name");
             String address = request.getParameter("Address");
             String email = request.getParameter("E-mail");
-            String msisdn = request.getParameter("MSISDN");
 
-            
             CustomerBean b = new CustomerBean();
 
             b.setId(Integer.parseInt(nationalid));
             b.setName(username);
             b.setAddress(address);
             b.setEmail(email);
-            b.setmsisdn(Integer.parseInt(msisdn));
 
-          
-            CustomerDAO.getConnection();
+         //   CustomerDAO.getConnection();
+
             int s = CustomerDAO.save(b);
+
             if (s == 1) {
-                out.println("Added Successfully!!");
+                response.sendRedirect("AddContract.jsp");
             } else {
                 response.sendRedirect("error.jsp");
             }
